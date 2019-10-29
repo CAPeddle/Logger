@@ -85,7 +85,7 @@ namespace Logger.Controllers
             _context.LogEntries.Add(logEntry);
             await _context.SaveChangesAsync();
             
-            _logger.LogInformation($"{logEntry.LogTime} : {logEntry.Entry}" );
+            _logger.LogInformation($"{logEntry.LogTime} : [{logEntry.Entry}]" );
 
             //return CreatedAtAction("GetLogEntry", new { id = logEntry.Id }, logEntry);
             return CreatedAtAction(nameof(GetLogEntry), new { id = logEntry.Id }, logEntry);
