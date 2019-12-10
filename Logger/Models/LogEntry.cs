@@ -8,7 +8,7 @@ namespace Logger.Models
     public class LogEntry
     {
         public long Id { get; set; }
-        public DateTime LogTime { get; set; }
+        public string LogTime { get; set; }
         public string Entry { get; set; }
 
     }
